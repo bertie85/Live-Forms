@@ -1,0 +1,344 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Basics */
+.main {
+  width: 98%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 1%;
+
+  /*background: #a3e4ff;*/
+}
+
+#form-title {
+  width: 40%;
+  padding: 0.2% 0.4% 0.2%;
+  font-size: 14px;
+  color: #333;
+}
+
+.section-form-title {
+  margin: 2%;
+  color: #0f74d8;
+}
+
+.capitalise {
+  text-transform: capitalize;
+}
+
+.add-new-extra-section-form--wrapper {
+  width: 100%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding: 1%;
+
+  /*background: darkgrey;*/
+}
+
+.questions-wrapper {
+  width: 98%;
+  margin-bottom: 4%;
+  padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /*background: #ff9999;*/
+}
+
+.question-mirror-pair-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.question {
+  display: inline-block;
+  width: 48%;
+  border-right: dashed #888 1px;
+  padding: 1%;
+
+  /*background: #bbddff;*/
+}
+
+/* TODO hide the whole mirror if screen is smaller than x */
+.mirror {
+  display: inline-block;
+  width: 48%;
+  padding: 1%;
+
+  /*background: #0f74d8;*/
+}
+
+/* For question and mirror pairs to be the same height */
+.row {
+  display: flex;
+}
+
+.col {
+  flex: 1;
+}
+
+/* Buttons */
+.question-button-group {
+  width: 96.8%;
+  margin-left: 1%;
+  padding: 1%;
+
+  /*background: #8899dd;*/
+}
+
+.add-new-question-button-wrapper {
+  display: inline-block;
+  text-align: right;
+  width: 48%;
+  padding: 1%;
+
+  /*background: brown;*/
+}
+
+.remove-question-button-wrapper {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  padding: 1%;
+
+  /*background: brown;*/
+}
+
+.save-extra-section-button-wrapper {
+  text-align: right;
+  padding: 2%;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  border-top: 1px solid #bbc;
+
+  /*background: brown;*/
+}
+
+.add-new-question-button,
+.save-extra-section-button,
+.remove-question-button {
+  width: 180px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 14px;
+}
+
+.add-new-question-button:hover,
+.remove-question-button:hover,
+.save-extra-section-button:hover {
+  cursor: pointer;
+  background: #ddd;
+
+  /*background: #f99;*/
+}
+
+.question--field-wrapper {
+  display: block;
+  /*line-height: 40px;*/
+
+  /*margin: 20px;*/
+  /*width: 80%;*/
+  /*position: relative;*/
+  /*left: 160px;*/
+  padding: 1%;
+
+  /*background: burlywood;*/
+}
+
+.question-field--label-wrapper {
+  width: 14%;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.84em;
+  padding: 1%;
+
+  /*background: #dddddd;*/
+}
+
+.question--input-wrapper {
+  width: 80%;
+  display: inline-block;
+  padding: 1%;
+
+  /*background: #61dafb;*/
+}
+
+.question--field-wrapper-secondary {
+  display: block;
+  width: 80%;
+  margin-top: 15px;
+  margin-left: 15%;
+  font-size: 0.8em;
+  padding: 1%;
+
+  /*background: #cBfEff;*/
+}
+
+.question--field-wrapper-secondary .question-field--label-wrapper {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.question--field-wrapper-secondary--radios {
+  display: flex;
+  align-items: center;
+  padding: 4%;
+}
+
+.question--field-wrapper-secondary--radio {
+  flex: 1;
+}
+
+.radio-wrapper--label {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-wrapper--input {
+  display: flex;
+  flex-direction: row;
+}
+
+.question--input-wrapper-secondary {
+  width: 90%;
+  margin-left: 2%;
+  /*line-height: 30px;*/
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 4%;
+  /*text-align: right;*/
+  padding: 1%;
+
+  /*background: chartreuse;*/
+}
+
+.question--input-secondary {
+  border: none;
+}
+
+.question--input--select-options {
+  /*display: block;*/
+  /*text-align: right;*/
+  padding: 1%;
+
+  /*background: black;*/
+}
+
+.question-number {
+  text-align: center;
+  padding: 10px;
+  width: 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+
+  background: #eee;
+}
+
+.select-week-options-input,
+.select-months-options-input {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Mirror styling */
+
+.text-mirror {
+  position: relative;
+  top: -55px;
+  left: 600px;
+
+  /*left: 640px;*/
+  /*top: 22px;*/
+  float: right;
+
+  /*padding: 2%;*/
+
+  /*background: #bbddff;*/
+}
+
+.mirror-question-text {
+  word-wrap: break-spaces;
+
+}
+
+h4 {
+  display: inline;
+  padding-top: 1%;
+}
+
+.required-asterisk-show {
+  display: inline;
+  /*font-size: 1.2em;*/
+  color: red;
+  padding-top: 1%;
+  padding-left: 1%;
+
+  /*background: #0f74d8;*/
+}
+
+.required-asterisk-hide {
+  display: none;
+}
+
+.mirror-question-helptext {
+  font-size: 12px;
+  font-style: italic;
+  padding-top: 2%;
+}
+
+.mirror-input-element {
+  /*display: flex;*/
+}
+
+.mirror-input-length {
+  display: block;
+  margin-top: 0.4em;
+  font-size: 0.8em;
+}
+
+input {
+  padding-left: 0.8em;
+  width: 90%;
+  height: 25px;
+}
+
+select {
+  width: 93%;
+  height: 25px;
+}
+
+textarea {
+  overflow: auto hidden;
+  overflow-wrap: break-word;
+  width: 90%;
+  padding-left: 1%;
+}
+
+.hidden {
+  display: none;
+}
+
+/* TODO create different files for different parts of the app and put related styling there */
+/* TODO align mirror fields with question fields */
