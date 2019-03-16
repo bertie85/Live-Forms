@@ -1,4 +1,4 @@
-import {Component} from "react";
+import { Component } from "react";
 import React from "react";
 import Label from "./Label";
 
@@ -22,13 +22,13 @@ class Checkbox extends Component {
       <div className={"question--field-wrapper"}>
 
         {/* Label */}
-        <Label idFor={this.props.id} text={this.props.label}/>
+        <Label idFor={this.props.id} text={this.props.label} />
 
         <div className={"question--input-wrapper"}>
           <input className={"question--input"} type={"checkbox"}
-                 id={this.props.id}
-                 onChange={this.updateMirror}
-                 onBlur={this.getMirrorOptions}
+            id={this.props.id}
+            onChange={this.updateMirror}
+            onBlur={this.getMirrorOptions}
           />
         </div>
       </div>
