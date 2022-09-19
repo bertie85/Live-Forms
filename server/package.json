@@ -14,9 +14,9 @@
     "graphql": "^14.0.2",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.3",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^4.11.0"
   },
   "devDependencies": {
-    "concurrently": "^4.0.1"
+    "concurrently": "^7.4.0"
   }
 }

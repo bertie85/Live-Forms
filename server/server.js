@@ -8,21 +8,25 @@ const cors = require("cors"); // this will make the back end and the front end s
 
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 // Enable cross site scripting
 app.use(cors());
 
 // Connect to the database
-mongoose.connect("mongodb://administrator:m0ng0Admin@mongodb-629-0.cloudclusters.net/test-db?authSource=admin"); //live-forms-db
-mongoose.connection.once("open", () => {
-  console.log("Connection open");
-});
+// mongoose.connect("mongodb://administrator:m0ng0Admin@mongodb-629-0.cloudclusters.net/test-db?authSource=admin"); //live-forms-db
+// mongoose.connection.once("open", () => {
+//   console.log("Connection open");
+// });
 
 // Use graphql
 app.use("/graphql", graphqlHTTP({
   schema, // because of es6 we can just use this instead of doing schema: schema!
-  // graphiql: true,
+  graphiql: true,
 }));
+
+app.get('/', (req, res) => {
+  res.json({ hello: "I am lindsey lohan" })
+})
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
