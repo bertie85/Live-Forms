@@ -21,14 +21,14 @@ class Title extends React.Component {
     // how do i check against this? if it's an input or a h2 or a span?
     // console.log(e.target)
 
-    if (this.state.enterPressed && this.state.title != "No title was entered. Click on this text to enter one.") {
+    if (this.state.enterPressed && this.state.title !== "No title was entered. Click on this text to enter one.") {
       this.setState({
         enterPressed: false,
         inputValue: this.state.title,
       });
     }
     else {
-      this.setState({inputValue: "", enterPressed: false});
+      this.setState({ inputValue: "", enterPressed: false });
     }
   }
 
@@ -50,25 +50,23 @@ class Title extends React.Component {
   }
 
   render() {
-    const return_element = this.state.enterPressed === false ?
+    return this.state.enterPressed === false ?
       <div className={"section-form-title"}>
         <input type={"text"} id={"form-title"}
-               defaultValue={this.state.inputValue}
-               onClick={this.handleClick}
-               onKeyPress={this.handleEnter}
-               onBlur={this.handleOnBlur}
-               placeholder={"Click here to enter a title"}/>
+          defaultValue={this.state.inputValue}
+          onClick={this.handleClick}
+          onKeyPress={this.handleEnter}
+          onBlur={this.handleOnBlur}
+          placeholder={"Click here to enter a title"} />
       </div>
       :
       <div className={"section-form-title"}>
         <h2 onClick={this.handleClick}>
           <span className={"capitalise"}>
-          {this.state.title}
+            {this.state.title}
           </span>
         </h2>
       </div>;
-
-    return return_element;
   }
 }
 
